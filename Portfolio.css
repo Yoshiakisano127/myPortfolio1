@@ -1,0 +1,452 @@
+#main{
+  display:none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("skull.jpg");
+  background-size: 100% 100%;
+}
+canvas#neurons{
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  top: 35%;
+  left: 62.25%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-size: contain;
+  background-position:50% 50%;
+  background-size: auto 100%;
+}
+canvas#prediction{
+  display: none;
+  position: absolute;
+  background-color: white;
+  height: 35%;
+  top: 35%;
+  left: 76%;
+}
+#top{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  color: white;
+  border: 1px white solid;
+  text-align: center;
+  font-family: serif;
+  font-size: 150%
+}
+#next{
+  position: absolute;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 100%;
+  color: white;
+  background-color: black;
+  bottom: 10%;
+  right: 5%;
+  width: 20%;
+  height: 25%;
+}
+canvas#alchemyCircle{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  background-size: contain;
+  background-image: url("alchemyCircle.jpg");
+  background-position:50% 40%;
+  background-size: auto 150%;
+  border-radius: 50%;
+}
+#strToClipboard{
+  position: absolute;
+  color: white;
+  background-color: gray;
+  width: 10%;
+  height: 10%;
+  top: 10%;
+  left: 90%;
+  text-align: center;
+}
+#scissors{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 80%;
+  left: 15%;
+  background-image: url("scissors.jpg");
+  background-size: cover;
+}
+#eye1{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url("eye.jpg");
+  background-position:50% 50%;
+  background-size:auto 1000%;
+}
+#eye2{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye2.jpg');
+  background-position:55% 52.0%;
+  background-size:auto 500%;
+}
+#eye3{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye3.jpg');
+  background-position:50% 60%;
+  background-size:auto 700%;
+}
+#eye4{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye4.jpg');
+  background-position:67.5% 60.0%;
+  background-size:auto 250%;
+}
+#eye5{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye5.jpg');
+  background-position:25.0% 40.0%;
+  background-size:auto 250%;
+}
+#eye6{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye6.jpg');
+  background-position:70.0% 40.0%;
+  background-size:auto 250%;
+}
+#eye7{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye7.jpg');
+  background-position:50% 50%;
+  background-size:auto 500%;
+}
+#eye8{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye8.jpg');
+  background-position:50% 50%;
+  background-size:auto 100%;
+}
+#eye9{
+  position: absolute;
+  display: none;
+  padding: 2%;
+  top: 45%;
+  left: 43.5%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image:url('eye9.jpg');
+  background-position:50% 50%;
+  background-size:auto 200%;
+}
+#plyCrd{
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  font-size:190%;
+  font-family: fantasy;
+  color: white;
+}
+#ace,#two,#three,#four,#five,#six,#seven,#eight,#nine,#ten,#jack,#queen,#king{
+  float: left;
+}
+#loading{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("darkArt.jpg");
+  background-size: cover;
+}
+p.imgClipLoading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: serif;
+  font-size: 100px;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+span.jumpingLoading{
+  position: relative;
+  background-image: url("almoniumFoil.jpg");
+  -webkit-background-clip: text;
+}
+span.jumpingLoading:nth-child(1){
+  animation-name: move1;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:50% 50%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(2){
+  animation-name: move2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:25% 50%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(3){
+  animation-name: move3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:75% 50%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(4){
+  animation-name: move4;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:50% 25%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(5){
+  animation-name: move5;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:25% 75%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(6){
+  animation-name: move6;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:90% 90%;
+  color: rgba(0, 0, 0, 0);
+}
+span.jumpingLoading:nth-child(7){
+  animation-name: move7;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-position:50%50%;
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes move1{
+  0%{
+    top: -10px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move2{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: -10px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move3{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: -10px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move4{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: -10px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move5{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: -10px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move6{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: -10px;
+  }
+  84%{
+    top: 0px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes move7{
+  0%{
+    top: 0px;
+  }
+  14%{
+    top: 0px;
+  }
+  28%{
+    top: 0px;
+  }
+  42%{
+    top: 0px;
+  }
+  56%{
+    top: 0px;
+  }
+  70%{
+    top: 0px;
+  }
+  84%{
+    top: -10px;
+  }
+  100%{
+    top: 0px;
+  }
+}
