@@ -289,7 +289,6 @@ function lineChange(){
     }
     for(var i=0;i<trainingData.length;i++){
       layers[layers.length-1].neurons[i].error=(Math.exp(layers[layers.length-1].neurons[i].variable)/sum)-trainingData[i];
-      console.log(trainingData[i]);
     }
     return layers;
   }
