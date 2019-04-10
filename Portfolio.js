@@ -79,7 +79,7 @@ window.addEventListener("load",()=>{
 
 function lineChange(){
   var lines=[
-    'To begine with, you have to draw one of the letters("10" included) written on the bottom...',
+    'You have to draw one of the letters or the number 10. Please draw in the circle on the left side of the screen...',
     "If the letter you're drawing doesn't look good, you can use the scissors below to erace it...",
     "If you finished drawing a letter, please touch my eye. You'll see something interesting...",
     "This is how my brain works...It's kind of gross...",
